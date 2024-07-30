@@ -62,6 +62,7 @@
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
         if(!audio) return; // stop the function from running all together
         audio.play();
+        key.classList.add('playing');
         console.log(audio);
         console.log(key);
       });
