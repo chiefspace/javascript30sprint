@@ -65,9 +65,14 @@
         audio.currentTime = 0; // rewind sound to the start
         audio.play();
         key.classList.add('playing');
-        console.log(audio);
-        console.log(key);
+        // console.log(audio);
+        // console.log(key);
       });
+
+      function removeTransition(e) {
+        if (e.propertyName !== 'transform') return; // skip it if its not a transform
+        console.log(e.propertyName);
+      }
 
       const keys = document.querySelectorAll('.key');
       keys.forEach(key => key.addEventListener('transitionend', removeTransition));
