@@ -36,6 +36,11 @@ function displayMatches() {
   console.log(this.value);
 }
 
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+
 // LEFT OFF AT 9:35 in the VIDEO LESSON - 06 - Ajax Type Ahead
 </script>
 </body>
